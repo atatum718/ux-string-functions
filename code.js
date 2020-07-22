@@ -11,6 +11,11 @@
 function isEmptyString(string) {
   let result;
   // Add your code here.
+  if (string === "") {
+    result = true;
+  } else {
+    result = false;
+  }
   return result;
 }
 
@@ -40,6 +45,14 @@ console.log(isEmptyString(" ") === false);
 function containsWordJava(text) {
   let result;
   // Add your code here.
+
+  let convertText = text.toLowerCase();
+  if (convertText.includes("java")) {
+    result = true;
+  } else {
+    result = false;
+  }
+
   return result;
 }
 
@@ -69,6 +82,11 @@ console.log(containsWordJava("JAVA IS FUN :D") === true);
 
 function trimSentence(text, maxLength) {
   // Add your code here.
+  let adjustedLength = maxLength - 3;
+  if (text.length > adjustedLength) {
+    return text.slice(0, adjustedLength) + "...";
+  }
+
   return text;
 }
 
@@ -76,7 +94,7 @@ function trimSentence(text, maxLength) {
   -------TESTS---------------------------------------------------------------
   Run these commands to make sure you did it right. They should all be true.
 */
-console.log("-----Tests for Exercise One-----");
+console.log("-----Tests for Exercise Three-----");
 console.log("* Check Long sentence");
 console.log(
   trimSentence("The fox jumped over the fence to get to the farm.", 16) ===
@@ -100,6 +118,11 @@ console.log(trimSentence("Short", 16) === "Short");
 
 function trimSentence(text, maxLength) {
   // Add your code here.
+  let adjustedLength = maxLength - 3;
+  if (text.length > adjustedLength) {
+    return text.slice(0, adjustedLength) + "...";
+  }
+
   return text;
 }
 
